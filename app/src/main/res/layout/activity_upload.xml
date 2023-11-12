@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UploadActivity">
+    tools:context=".view.UploadActivity">
 
     <ImageView
-        android:id="@+id/selectImage"
+        android:id="@+id/imageViewClicked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:onClick="selectImage"
+        android:onClick="imageViewClicked"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,15 +19,27 @@
         app:srcCompat="@drawable/upload" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/commentText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:ems="10"
+        android:hint="Comment"
         android:inputType="text"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectImage" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewClicked" />
+
+    <Button
+        android:id="@+id/uploadClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="uploadClicked"
+        android:text="upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
